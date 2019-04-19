@@ -1,0 +1,47 @@
+li{
+     list-style: none;
+     display: inline;
+}
+
+button:hover{
+     font-size:40px;
+     min-width:250px;
+     background-color: blue;
+     color: whitesmoke;
+     animation:none;
+}
+
+img{
+     border:3px solid olive;
+     margin: 10px; 
+     width:25%;
+}
+
+.flash-button{
+     background-color:rgb(54, 44, 44);
+     width:150px;
+     border-radius:50px;
+     margin-top:10px;    
+     margin-left:10px;
+	color:goldenrod;
+	border:none;	
+     font-size: 20px;
+     padding: 8px;
+	animation-name: flash;
+	animation-duration: 3s;
+	animation-iteration-count:infinite;	
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@media only screen and (max-width:500px)
+{
+     li{
+          list-style: none;
+          display:inline;        
+     }
+}

@@ -1,0 +1,50 @@
+<div style="color:whitesmoke;font-size: 40px; text-align:center;background-color: #333560;min-height: 65px;">
+    Welcome to {{ title }}!
+  <img style="width:2%" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">  
+
+  <br><br>
+<div style="font-size:40px;text-align:center;opacity:0.7;">
+  <span style="opacity:0.5">  
+    P.A.D Movie
+    </span>
+  </div>
+</div>
+  <div>
+    <button *ngFor = "let language of languages" (click) = "getMovieImage(language.lang)"  
+    class="flash-button">{{ language.name }}</button>    
+</div>
+
+<div class="tamil" *ngIf="tamil" >
+  <ol class="image">
+  <li class="imagelist" (click) = "GetMovie('visvasam')"> <img  src="assets\images\Tamil\Visvasam\visvasam.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('irir')"> <img src="assets\images\Tamil\IRIR\irir.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('sathru')"> <img src="assets\images\Tamil\Sathru\sathru.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('Petta')"> <img src="assets\images\Tamil\Petta\Petta.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('lkg')"> <img src="assets\images\Tamil\LKG\lkg.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('boomerang')"> <img src="assets\images\Tamil\Boomerang\boomerang.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('DhilukkuDhuddu2')"> <img  src="assets\images\Tamil\DhilukkuDhuddu2\DhilukkuDhuddu2.jpg"> </li>
+  </ol>
+</div>  
+
+<div class="malayalam" *ngIf="malayalam" >
+  <ol class="image">
+  <li class="imagelist" (click) = "GetMovie('june')" > <img  src="assets\images\Malayalam\June\june.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('Lucifer')"> <img  src="assets\images\Malayalam\Lucifer\Lucifer.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('Kumbalanginights')" > <img  src="assets\images\Malayalam\Kumbalanginights\Kumbalanginights.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('VarikkuzhiyileKolapathakam')"> <img src="assets\images\Malayalam\VarikkuzhiyileKolapathakam\VarikkuzhiyileKolapathakam.jpg"> </li>
+  </ol>
+</div> 
+
+<div class="telugu" *ngIf="telugu" >
+    <ol class="image">
+    <li class="imagelist" (click) = "GetMovie('Suryakantham')" > <img  src="assets\images\Telugu\Suryakantham.jpg"> </li>
+    </ol>
+  </div> 
+
+<div class="english" *ngIf="english">
+  <ol class="image">
+  <li class="imagelist" (click) = "GetMovie('captainmarvel')"> <img src="assets\images\English\CaptainMarvel\captainmarvel.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('Dragon')"> <img  src="assets\images\English\Dragon\Dragon.jpg"> </li>
+  <li class="imagelist" (click) = "GetMovie('wonderpark')"> <img  src="assets\images\English\WonderPark\wonderpark.jpg"> </li>
+  </ol>
+</div>

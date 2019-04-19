@@ -1,0 +1,52 @@
+<div class="paymentdiv">     
+     <div class="paymentmaindiv" style="margin-top:2%">
+
+     <div class="theatre">
+     <span>Choose Your Theatre:</span>
+     <select id="theatre" (change)="SelectTheatres($event.target.value)" style="width:45%;margin-left:10px;padding:7px">
+               <option [value]="theatreName" *ngFor="let theatreName of theatreNames">{{theatreName}}</option>
+     </select><br>  <br> 
+     </div>
+
+     <div class="timings" *ngIf="timing">
+         <span>Choose Your Timing:</span>
+         <select id="timing" (change)="SelectTiming($event.target.value)" style="width:45%;margin-left:10px;padding:7px">
+               <option [value]="timing" *ngFor="let timing of showTimings">{{timing}}</option>
+          </select><br> <br>
+     </div>
+
+     <div class="ticketscount" *ngIf="ticketcount">
+     <div style="text-align:center;position: relative;right: 60px;">
+         <span>Tickets Count</span>
+     </div>
+     <br>
+     <div style="text-align:center;position: relative;right: 61px;">
+               <ol style="list-style: none;margin: 0">
+               <li class="ticketcountli" (click) = "SelectTicketCounts(count)" [ngStyle]= "{'background-color': count == ticketsCount  && liClicked?  'limegreen' : null}" *ngFor="let count of counts "> {{count}} </li>                   
+               </ol>
+     </div>
+     <div style="clear:both"></div>
+     </div>
+
+     <div class="PriceList" *ngIf="price">
+               <div style="text-align:center;position: relative;right: 60px;">
+                   <span>Fare</span>
+               </div>
+               <br>
+               <div style="text-align:center;position: relative;right: 61px;">
+                         <ol style="list-style: none;margin: 0;">
+                             <li class="ticketcountli" (click) = "SelectFare(price.Price)" [ngStyle]= "{'background-color': price.Price == amount  && liClicked?  'limegreen' : null}"  *ngFor="let price of prices "> {{price.Category}} {{price.Price}}   </li>                                                            
+                         </ol>
+               </div>
+               <div style="clear:both"></div>
+               </div>
+               <br>
+       <div *ngIf="finalprice">
+            <span style="font-size:40px">Total Fare = {{ticketsCount}} * {{amount}} = <span style="color:chartreuse;font-size:50px"> Rs {{totalFare}} </span> </span>
+       </div> <br>
+       <div *ngIf="conformButton">
+            <input style="cursor: pointer" class="flash-button" (click) ="FinalPage()" type="button" value="Proceed to Confirm">
+            <input style="margin-left:30px;cursor: pointer;" (click)="MovieSelectionPage()" class="flash-button" type="button" value="GoBack Movie Selection">            
+       </div>
+     </div>     
+</div>

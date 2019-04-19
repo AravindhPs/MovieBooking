@@ -1,0 +1,95 @@
+.ticketcountli{
+     display: inline-block;
+     border: 1px solid rosybrown;
+     margin: 0 15px 15px 15px;     
+     border-radius: 100px;
+     padding:10px;
+}
+.paymentmaindiv {
+    max-width: 500px;
+    margin: auto;
+}
+.paymentdiv{
+    float:left;
+    width:100%;
+    font-size:20px;
+    height:700px;
+    padding-left:10px; 
+    color:rgb(63, 39, 219);
+     background-image:url('../../assets/images/theatre/seating.jpg');      
+     font-style: italic; 
+}
+
+
+@media only screen and (max-width:450px)
+{
+    .paymentmaindiv {
+        max-width: 500px;
+        margin: auto;
+    }
+    .paymentdiv{
+        float:left;
+        width:100%;
+        font-size:15px;
+        height:100%;
+        padding-left:10px; 
+        color:rgb(63, 39, 219);
+         background-image:url('../../assets/images/theatre/seating.jpg');      
+         font-style: italic; 
+    } 
+    
+    .ticketcountli{
+        display: inline-flex;
+        margin-left:10px;
+        margin-right:10px;
+        border: 1px solid rosybrown;            
+        border-radius: 50px;
+        padding:7px;
+   }
+
+   .flash-button{
+	background-color:rgb(54, 44, 44);
+	padding:10px;
+    color:goldenrod;
+    margin-left:30px;
+    margin-top:15px;
+	border:none;	
+	font-size: 25px;
+	animation-name: flash;
+	animation-duration: 3s;
+	animation-iteration-count:infinite;	
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+}
+
+li:hover{
+    cursor: pointer;
+    background: limegreen;
+}   
+
+option{
+    color:brown;
+}
+
+.flash-button{
+	background-color:rgb(54, 44, 44);
+	padding:10px;
+	color:goldenrod;
+	border:none;	
+	font-size: 25px;
+	animation-name: flash;
+	animation-duration: 3s;
+	animation-iteration-count:infinite;	
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
